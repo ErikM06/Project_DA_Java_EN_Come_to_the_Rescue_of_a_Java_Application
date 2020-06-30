@@ -1,4 +1,4 @@
-package Project02Eclipse.src.com.hemebiotech.analytics;
+package Project02Eclipse.src.com.hemebiotech.analytics.Launcher;
 
 import java.util.List;
 import java.util.Map;

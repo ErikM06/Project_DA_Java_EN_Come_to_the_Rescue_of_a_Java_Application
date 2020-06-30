@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package Project02Eclipse.src.com.hemebiotech.analytics.SymptomReader;
 
 import java.util.List;
 

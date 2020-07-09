@@ -27,7 +27,7 @@ public class SymptomWriter implements ISymptomWriter {
 	 * 
 	 */
 	
-	public void SymptomsWriter(Map<String,Long> map) {
+	public void MapSymptomsWriter(Map<String,Long> map) {
 
 		if (filepathW != null) {
 			/**
@@ -35,7 +35,7 @@ public class SymptomWriter implements ISymptomWriter {
 			 */
 			File printOnFile = new File(filepathW);
 			// we create a new FileOuputStream with @param filepathW and we associate a PrinterWriter which print on fos
-			try (OutputStream fos = new FileOutputStream(printOnFile); PrintWriter pw = new PrintWriter(fos);) { 
+			try (OutputStream fos = new FileOutputStream(printOnFile); PrintWriter pw = new PrintWriter(fos);) { //autocloseable
 				
 				// create a Map m that will print @param map values and keys in the file
 				for (Map.Entry<String,Long> m : map.entrySet()) { 

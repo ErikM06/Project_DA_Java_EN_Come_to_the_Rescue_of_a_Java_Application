@@ -1,4 +1,4 @@
-package Project02Eclipse.src.com.hemebiotech.analytics.SymptomCount;
+package com.hemebiotech.analytics.SymptomCount;
 
 import java.util.List;
 import java.util.Map;

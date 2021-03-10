@@ -1,4 +1,4 @@
-package Project02Eclipse.src.com.hemebiotech.analytics.Launcher;
+package com.hemebiotech.analytics.Launcher;
 
 
 import java.util.List;
@@ -6,14 +6,14 @@ import java.util.Map;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-import Project02Eclipse.src.com.hemebiotech.analytics.SymptomCount.ISymptomCount;
-import Project02Eclipse.src.com.hemebiotech.analytics.SymptomCount.SymptomCount;
-import Project02Eclipse.src.com.hemebiotech.analytics.SymptomReader.ISymptomReader;
-import Project02Eclipse.src.com.hemebiotech.analytics.SymptomReader.ReadSymptomDataFromFile;
-import Project02Eclipse.src.com.hemebiotech.analytics.SymptomWriter.ISymptomWriter;
-import Project02Eclipse.src.com.hemebiotech.analytics.SymptomWriter.SymptomWriter;
-import Project02Eclipse.src.com.hemebiotech.analytics.WriterPath.IWriterDefaultPath;
-import Project02Eclipse.src.com.hemebiotech.analytics.WriterPath.WriterDefaultPath;
+import com.hemebiotech.analytics.SymptomCount.ISymptomCount;
+import com.hemebiotech.analytics.SymptomCount.SymptomCount;
+import com.hemebiotech.analytics.SymptomReader.ISymptomReader;
+import com.hemebiotech.analytics.SymptomReader.ReadSymptomDataFromFile;
+import com.hemebiotech.analytics.SymptomWriter.ISymptomWriter;
+import com.hemebiotech.analytics.SymptomWriter.SymptomWriter;
+import com.hemebiotech.analytics.WriterPath.IWriterDefaultPath;
+import com.hemebiotech.analytics.WriterPath.WriterDefaultPath;
 
 
 /**

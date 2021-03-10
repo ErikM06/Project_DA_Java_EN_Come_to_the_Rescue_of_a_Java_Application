@@ -1,4 +1,4 @@
-package Project02Eclipse.src.com.hemebiotech.analytics.WriterPath;
+package com.hemebiotech.analytics.WriterPath;
 
 import java.io.IOException;
 

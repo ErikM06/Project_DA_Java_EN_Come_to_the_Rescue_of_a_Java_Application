@@ -1,4 +1,4 @@
-package Project02Eclipse.src.com.hemebiotech.analytics.SymptomWriter;
+package com.hemebiotech.analytics.SymptomWriter;
 
 import java.io.File;
 import java.io.FileOutputStream;

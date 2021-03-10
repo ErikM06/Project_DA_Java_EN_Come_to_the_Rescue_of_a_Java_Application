@@ -51,7 +51,7 @@ public class Launcher {
 			if (args.length <= 1) {
 				System.out.println("default args[1] starting");
 				
-				File outputDefaultFilePath = new File ("C:\\users\\Public\\HemebioTech\\result.txt");
+				File outputDefaultFilePath = new File ("Project02Eclipse\\result.txt");
 				// convert the output filepath into String
 			    String output =outputDefaultFilePath.toString();
 				System.out.println(outputDefaultFilePath.getAbsolutePath());

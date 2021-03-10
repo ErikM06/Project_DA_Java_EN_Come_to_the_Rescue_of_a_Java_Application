@@ -74,7 +74,7 @@ public class Launcher {
 			
 		try {
 			ISymptomReader readSymptomDataFromFile = new ReadSymptomDataFromFile(inputPath);
-			List<String> symptoms = readSymptomDataFromFile.GetSymptoms(); // get the data input in a List of String
+			List<String> symptoms = readSymptomDataFromFile.getSymptoms(); // get the data input in a List of String
 			System.out.println(symptoms);
 						
 			ISymptomCount symptomCount = new SymptomCount();

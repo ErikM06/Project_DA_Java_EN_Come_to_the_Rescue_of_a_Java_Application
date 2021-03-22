@@ -24,24 +24,27 @@ public class Launcher {
 
 		String inputPath = null;
 		String outputPath = null;
-
+		
+		/*
+		 *  give a default filepath to args[0] (input filepath) if user don't specified it
+		 */
 		try {
 			if (args.length == 0) {
 				System.out.println("default args[0] starting");
-				// We need to indicate the repertory "Project02Eclispe\\symptoms.txt" as
-				// getAbsoluteFile won't breach into it
-				File inputDefaultFilePath = new File("Project02Eclipse\\symptoms.txt").getAbsoluteFile();
-				// convert the intput filepath into a String
-				String input = inputDefaultFilePath.toString();
+				
+				File inputDefaultFilePath = new File("Project02Eclipse\\symptoms.txt").getAbsoluteFile(); // We need to indicate the repertory "Project02Eclispe\\symptoms.txt" as getAbsoluteFile won't breach into it
+				String input = inputDefaultFilePath.toString(); // convert the intput filepath into a String
 				inputPath = input;
-
+				
 				System.out.println("The absolute Path is " + inputDefaultFilePath.getAbsolutePath());
 				System.out.println("default args[0] ending");
 			} else {
 				inputPath = args[0];
 			}
-
-			if (args.length <= 1) {
+			/*
+			 * give a default fielpath to args[1] (output filepath) if user don't specified it
+			 */
+			if (args.length < 1) {
 				System.out.println("default args[1] starting");
 
 				File outputDefaultFilePath = new File("Project02Eclipse\\result.txt");
@@ -64,9 +67,9 @@ public class Launcher {
 		}
 
 		try {
-
-			IComputMedical computMedicalOnFile = new ComputMedical(inputPath, outputPath);
-			computMedicalOnFile.printSymptomsOnMap();
+			
+			IComputMedical printSymptomsOnFile = new ComputMedical(inputPath, outputPath); 
+			printSymptomsOnFile.computMedicalOnFile(); //apply computMedicalOnFile method to prinSymptomsOnFile
 			
 		} catch (Exception e) {
 			System.out.println("an error occured");

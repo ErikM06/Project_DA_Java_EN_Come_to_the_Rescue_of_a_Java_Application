@@ -15,39 +15,39 @@ public class ComputMedical implements IComputMedical {
 	private String inputPath;
 	private String outputPath;
 
+	/**
+	 * @param inputPath outputPath from main
+	 * 
+	 */
 	public ComputMedical(String inputPath, String outputPath) {
 
 		this.inputPath = inputPath;
 		this.outputPath = outputPath;
-
 	}
 
-	public void printSymptomsOnMap() {
+	public void computMedicalOnFile() {
 
-		if (inputPath != null & outputPath != null)
-			try {
+		try {
 
-				ISymptomReader readSymptomDataFromFile = new ReadSymptomDataFromFile(inputPath);
-				List<String> symptoms = readSymptomDataFromFile.GetSymptoms(); // get the data input in a List of String
-				System.out.println(symptoms);
+			ISymptomReader readSymptomDataFromFile = new ReadSymptomDataFromFile(inputPath);
+			List<String> symptoms = readSymptomDataFromFile.GetSymptoms(); // get the data input in a List of String
+			System.out.println(symptoms);
 
-				ISymptomCount symptomCount = new SymptomCount();
-				Map<String, Long> count = symptomCount.result(symptoms); // count the symptoms and send them in a map
-				System.out.println(count);
+			ISymptomCount symptomCount = new SymptomCount();
+			Map<String, Long> count = symptomCount.result(symptoms); // count the symptoms and send them in a map
+			System.out.println(count);
 
-				ISymptomWriter writeSymptomsCountOnFile = new SymptomWriter(outputPath); // Read the localized file
-				System.out.println(outputPath);
+			ISymptomWriter writeSymptomsCountOnFile = new SymptomWriter(outputPath); // Read the localized file
+			System.out.println(outputPath);
 
-				writeSymptomsCountOnFile.MapSymptomsWriter(count); // write the symptoms on the localized file
+			writeSymptomsCountOnFile.MapSymptomsWriter(count); // write the symptoms on the localized file
 
-			}
+		}
 
-			catch (Exception e) {
-				System.out.println("an error occured");
-			}
-		else {
-			System.out.println("No input nor output paths find");
+		catch (Exception e) {
+			System.out.println("an error occured");
 		}
 
 	}
+
 }

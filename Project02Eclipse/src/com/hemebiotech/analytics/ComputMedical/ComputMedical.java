@@ -13,20 +13,18 @@ import com.hemebiotech.analytics.SymptomWriter.SymptomWriter;
 public class ComputMedical implements IComputMedical {
 
 	private String inputPath;
-	
+	private String outputPath;
 
-	public ComputMedical(String inputPath) {
+	public ComputMedical(String inputPath, String outputPath) {
 
 		this.inputPath = inputPath;
-		
+		this.outputPath = outputPath;
 
 	}
 
-	public Map<String, Long> printSymptomsOnMap() {
+	public void printSymptomsOnMap() {
 
-		Map<String, Long> count = null;
-
-		if (inputPath != null)
+		if (inputPath != null & outputPath != null)
 			try {
 
 				ISymptomReader readSymptomDataFromFile = new ReadSymptomDataFromFile(inputPath);
@@ -34,8 +32,13 @@ public class ComputMedical implements IComputMedical {
 				System.out.println(symptoms);
 
 				ISymptomCount symptomCount = new SymptomCount();
-				count = symptomCount.result(symptoms); // count the symptoms and send them in a map
+				Map<String, Long> count = symptomCount.result(symptoms); // count the symptoms and send them in a map
 				System.out.println(count);
+
+				ISymptomWriter writeSymptomsCountOnFile = new SymptomWriter(outputPath); // Read the localized file
+				System.out.println(outputPath);
+
+				writeSymptomsCountOnFile.MapSymptomsWriter(count); // write the symptoms on the localized file
 
 			}
 
@@ -45,7 +48,6 @@ public class ComputMedical implements IComputMedical {
 		else {
 			System.out.println("No input nor output paths find");
 		}
-		return count;
 
 	}
 }

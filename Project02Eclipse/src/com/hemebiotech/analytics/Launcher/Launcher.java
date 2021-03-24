@@ -24,25 +24,27 @@ public class Launcher {
 
 		String inputPath = null;
 		String outputPath = null;
-		
+
 		/*
-		 *  give a default filepath to args[0] (input filepath) if user don't specified it
+		 * give a default filepath to args[0] (input filepath) if user don't specified
+		 * it
 		 */
 		try {
 			if (args.length == 0) {
 				System.out.println("default args[0] starting");
-				
-				File inputDefaultFilePath = new File("Project02Eclipse\\symptoms.txt").getAbsoluteFile(); // We need to indicate the repertory "Project02Eclispe\\symptoms.txt" as getAbsoluteFile won't breach into it
+				File inputDefaultFilePath = new File("Project02Eclipse\\symptoms.txt").getAbsoluteFile();
 				String input = inputDefaultFilePath.toString(); // convert the intput filepath into a String
 				inputPath = input;
-				
 				System.out.println("The absolute Path is " + inputDefaultFilePath.getAbsolutePath());
 				System.out.println("default args[0] ending");
+				
 			} else {
 				inputPath = args[0];
 			}
+
 			/*
-			 * give a default fielpath to args[1] (output filepath) if user don't specified it
+			 * give a default fielpath to args[1] (output filepath) if user don't specified
+			 * it
 			 */
 			if (args.length < 1) {
 				System.out.println("default args[1] starting");
@@ -50,7 +52,7 @@ public class Launcher {
 				File outputDefaultFilePath = new File("Project02Eclipse\\result.txt");
 				// convert the output filepath into String
 				String output = outputDefaultFilePath.toString();
-				System.out.println("The output path is " +outputDefaultFilePath.getAbsolutePath());
+				System.out.println("The output path is " + outputDefaultFilePath.getAbsolutePath());
 
 				IWriterDefaultPath writerDefaultFilePath = new WriterDefaultPath();
 				// create the output filepath and the file indicated
@@ -66,20 +68,10 @@ public class Launcher {
 		}
 
 		try {
-<<<<<<< HEAD
-			ISymptomReader readSymptomDataFromFile = new ReadSymptomDataFromFile(inputPath);
-			List<String> symptoms = readSymptomDataFromFile.getSymptoms(); // get the data input in a List of String
-			System.out.println(symptoms);
-						
-			ISymptomCount symptomCount = new SymptomCount();
-			Map<String, Long> count = symptomCount.result(symptoms); // count the symptoms and send them in a map
-			System.out.println(count);
-=======
->>>>>>> feature/feature_branch
-			
-			IComputMedical printSymptomsOnFile = new ComputMedical(inputPath, outputPath); 
-			printSymptomsOnFile.computMedicalOnFile(); //apply computMedicalOnFile method to prinSymptomsOnFile
+			IComputMedical printSymptomsOnFile = new ComputMedical(inputPath, outputPath);
+			printSymptomsOnFile.computMedicalOnFile(); // apply computMedicalOnFile method to prinSymptomsOnFile
 			System.out.println("Symptoms have been written on the file");
+			
 		} catch (Exception e) {
 			System.out.println("an error occured");
 		}

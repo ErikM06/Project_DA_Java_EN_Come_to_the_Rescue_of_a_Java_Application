@@ -14,6 +14,6 @@ public interface IWriterDefaultPath {
 	 * @param defaultOutputFilePath the default output filepath indicated in main
 	 * @throws IOException
 	 */
-	void GetWriterDefaultPath(String defaultOutputFilePath) throws IOException ;
+	void getWriterDefaultPath(String defaultOutputFilePath) throws IOException ;
 
 }

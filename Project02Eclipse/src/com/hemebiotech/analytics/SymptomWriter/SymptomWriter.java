@@ -27,7 +27,7 @@ public class SymptomWriter implements ISymptomWriter {
 	 * 
 	 */
 	
-	public void MapSymptomsWriter(Map<String,Long> map) {
+	public void mapSymptomsWriter(Map<String,Long> map) {
 
 		if (filepathW != null) {
 			/**

@@ -50,13 +50,12 @@ public class Launcher {
 				File outputDefaultFilePath = new File("Project02Eclipse\\result.txt");
 				// convert the output filepath into String
 				String output = outputDefaultFilePath.toString();
-				System.out.println(outputDefaultFilePath.getAbsolutePath());
+				System.out.println("The output path is " +outputDefaultFilePath.getAbsolutePath());
 
 				IWriterDefaultPath writerDefaultFilePath = new WriterDefaultPath();
 				// create the output filepath and the file indicated
-				writerDefaultFilePath.GetWriterDefaultPath(output);
+				writerDefaultFilePath.getWriterDefaultPath(output);
 				outputPath = output;
-				System.out.println(outputPath);
 				System.out.println("default args[1] ending");
 
 			} else {
@@ -80,7 +79,7 @@ public class Launcher {
 			
 			IComputMedical printSymptomsOnFile = new ComputMedical(inputPath, outputPath); 
 			printSymptomsOnFile.computMedicalOnFile(); //apply computMedicalOnFile method to prinSymptomsOnFile
-			
+			System.out.println("Symptoms have been written on the file");
 		} catch (Exception e) {
 			System.out.println("an error occured");
 		}

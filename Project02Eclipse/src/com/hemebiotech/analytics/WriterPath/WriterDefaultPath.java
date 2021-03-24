@@ -5,27 +5,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 
-
 public class WriterDefaultPath implements IWriterDefaultPath {
-	
+
 	/**
 	 * @param outputDefaultFilePath indicated in main
 	 */
-	public void GetWriterDefaultPath(String outputDefaultFilePath) {
-		
+	public void getWriterDefaultPath(String outputDefaultFilePath) {
+
 		Writer fw = null;
 		try {
-			File file = new File (outputDefaultFilePath);
+			File file = new File(outputDefaultFilePath);
 			file.getParentFile().mkdirs(); // create all the directories if they don't already exist
-			fw = new FileWriter (file);
-			System.out.println("path is "+ file.getAbsolutePath());
-			
-		}
-		catch (Exception e){
+			fw = new FileWriter(file);
+
+		} catch (Exception e) {
 			System.out.println("Default path couldn't be created");
 		}
-		
-		
+
 		finally {
 			System.out.println("The try finished");
 			try {

@@ -12,10 +12,10 @@ public interface ISymptomWriter {
 	
 	/**
 	 * 
-	 * @param map the TreeMap that ISymptomCount return
+	 * @param count the TreeMap that ISymptomCount return
 	 */
 	
-	 void mapSymptomsWriter(Map<String, Long> map);
+	 void mapSymptomsWriter(Map<String, Integer> count);
 	 
 	 
 

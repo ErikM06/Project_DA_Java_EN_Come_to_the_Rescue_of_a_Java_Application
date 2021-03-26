@@ -10,18 +10,21 @@ public class SymptomCount implements ISymptomCount {
 	/**
 	 * @param symptoms the List returned from ISymptomReader
 	 */
-	public Map<String,Long> getSymptomsCount (List <String> symptoms){
+	public Map<String,Integer> getSymptomsCount (List <String> symptoms){
 		
-		Map<String,Long> countEverySymptoms = new TreeMap<String,Long>();
+		Map<String,Integer> countEverySymptoms = new TreeMap<String,Integer>();
 		
-		symptoms.forEach(item->{  
-			
-			if(countEverySymptoms.get(item)==null) { 
-				
-				countEverySymptoms.put(item, symptoms.stream() // put item and the stream.filter in the map
-						.filter(i->i.contains(item)).count());	// stream.filter count every item occurrence in the stream
+		for (String s : symptoms) {
+			if(countEverySymptoms.containsKey(s)) {
+				Integer count = countEverySymptoms.get(s);
+				countEverySymptoms.put(s, count+1);
 			}
-		});
+			else {
+				countEverySymptoms.put(s, 1);
+			}
+			
+		}
+		
 			return countEverySymptoms;
 	}
 

@@ -19,6 +19,6 @@ public interface ISymptomCount {
 	 *
 	 */
 	
-	Map<String,Long> getSymptomsCount (List<String> symptoms);
+	Map<String,Integer> getSymptomsCount (List<String> symptoms);
 	 
 }

@@ -29,7 +29,8 @@ public class ReadSymptomDataFromFile implements IReadSymptomDataFromFile {
 		
 		if (inputPath != null) {
 			try {
-				BufferedReader reader = new BufferedReader (new FileReader(inputPath));
+				FileReader For = new FileReader (inputPath);
+				BufferedReader reader = new BufferedReader (For);
 				String line = reader.readLine();
 				
 				while (line != null) {

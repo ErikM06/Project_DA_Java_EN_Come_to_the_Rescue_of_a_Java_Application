@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Map;
+import java.util.Map.Entry;
 
 
 public class SymptomWriter implements ISymptomWriter {
@@ -27,7 +28,7 @@ public class SymptomWriter implements ISymptomWriter {
 	 * 
 	 */
 	
-	public void mapSymptomsWriter(Map<String,Long> countEverySymptoms) {
+	public void mapSymptomsWriter(Map<String,Integer> countEverySymptoms) {
 
 		if (filepathW != null) {
 			/**
@@ -35,10 +36,11 @@ public class SymptomWriter implements ISymptomWriter {
 			 */
 			File printOnFile = new File(filepathW);
 			// we create a new FileOuputStream with @param filepathW and we associate a PrinterWriter which print on fos
-			try (OutputStream fos = new FileOutputStream(printOnFile); PrintWriter pw = new PrintWriter(fos);) { //autocloseable
-				
+			try {
+				OutputStream fos = new FileOutputStream(printOnFile);
+				PrintWriter pw = new PrintWriter(fos); //autocloseable
 				// create a Map m that will print @param map values and keys in the file
-				for (Map.Entry<String,Long> m : countEverySymptoms.entrySet()) { 
+				for (Entry<String, Integer> m : countEverySymptoms.entrySet()) { 
 					pw.println(m.getKey() + "=" + m.getValue());  
 				}
 

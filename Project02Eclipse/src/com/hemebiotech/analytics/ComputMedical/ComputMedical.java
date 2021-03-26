@@ -33,7 +33,7 @@ public class ComputMedical implements IComputMedical {
 			List<String> symptoms = readSymptomDataFromFile.getSymptomsFromFile(); // get the data input in a List of String
 
 			ISymptomCount symptomCount = new SymptomCount();
-			Map<String, Long> count = symptomCount.getSymptomsCount(symptoms); // count the symptoms and send them in a map
+			Map<String, Integer> count = symptomCount.getSymptomsCount(symptoms); // count the symptoms and send them in a map
 
 			ISymptomWriter writeSymptomsCountOnFile = new SymptomWriter(outputPath); // Read the localized file
 			

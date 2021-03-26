@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.hemebiotech.analytics.SymptomCount.ISymptomCount;
 import com.hemebiotech.analytics.SymptomCount.SymptomCount;
-import com.hemebiotech.analytics.SymptomReader.ISymptomReader;
+import com.hemebiotech.analytics.SymptomReader.IReadSymptomDataFromFile;
 import com.hemebiotech.analytics.SymptomReader.ReadSymptomDataFromFile;
 import com.hemebiotech.analytics.SymptomWriter.ISymptomWriter;
 import com.hemebiotech.analytics.SymptomWriter.SymptomWriter;
@@ -29,11 +29,11 @@ public class ComputMedical implements IComputMedical {
 
 		try {
 
-			ISymptomReader readSymptomDataFromFile = new ReadSymptomDataFromFile(inputPath);
-			List<String> symptoms = readSymptomDataFromFile.getSymptoms(); // get the data input in a List of String
+			IReadSymptomDataFromFile readSymptomDataFromFile = new ReadSymptomDataFromFile(inputPath);
+			List<String> symptoms = readSymptomDataFromFile.getSymptomsFromFile(); // get the data input in a List of String
 
 			ISymptomCount symptomCount = new SymptomCount();
-			Map<String, Long> count = symptomCount.result(symptoms); // count the symptoms and send them in a map
+			Map<String, Long> count = symptomCount.getSymptomsCount(symptoms); // count the symptoms and send them in a map
 
 			ISymptomWriter writeSymptomsCountOnFile = new SymptomWriter(outputPath); // Read the localized file
 			

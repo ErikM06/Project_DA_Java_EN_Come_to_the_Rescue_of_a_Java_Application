@@ -23,11 +23,11 @@ public class SymptomWriter implements ISymptomWriter {
 	}
 	
 	/**
-	 * @param map TreeMap from ISymptomCount
+	 * @param countEverySymptoms TreeMap from ISymptomCount
 	 * 
 	 */
 	
-	public void mapSymptomsWriter(Map<String,Long> map) {
+	public void mapSymptomsWriter(Map<String,Long> countEverySymptoms) {
 
 		if (filepathW != null) {
 			/**
@@ -38,7 +38,7 @@ public class SymptomWriter implements ISymptomWriter {
 			try (OutputStream fos = new FileOutputStream(printOnFile); PrintWriter pw = new PrintWriter(fos);) { //autocloseable
 				
 				// create a Map m that will print @param map values and keys in the file
-				for (Map.Entry<String,Long> m : map.entrySet()) { 
+				for (Map.Entry<String,Long> m : countEverySymptoms.entrySet()) { 
 					pw.println(m.getKey() + "=" + m.getValue());  
 				}
 

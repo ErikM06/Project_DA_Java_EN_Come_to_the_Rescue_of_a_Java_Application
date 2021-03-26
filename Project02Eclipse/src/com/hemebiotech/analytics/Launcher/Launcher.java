@@ -70,8 +70,9 @@ public class Launcher {
 		}
 
 		try {
-			IComputMedical printSymptomsOnFile = new ComputMedical(inputPath, outputPath);
-			printSymptomsOnFile.computMedicalOnFile(); // apply computMedicalOnFile method to prinSymptomsOnFile
+
+			IComputMedical printSymptomsOnFile = new ComputMedical(inputPath, outputPath); 
+			printSymptomsOnFile.computMedicalOnFile(); //apply computMedicalOnFile method to prinSymptomsOnFile
 			
 		} catch (Exception e) {
 			System.out.println("an error occured");

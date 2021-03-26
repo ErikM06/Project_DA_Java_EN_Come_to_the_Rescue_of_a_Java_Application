@@ -44,7 +44,7 @@ public class Launcher {
 			/*
 			 * give a default fielpath to args[1] (output filepath) if user don't specified it
 			 */
-			if (args.length == 1 ) {
+			if (args.length <= 1 ) {
 				System.out.println("default args[1] starting");
 
 				File outputDefaultFilePath = new File("Project02Eclipse\\result.txt");

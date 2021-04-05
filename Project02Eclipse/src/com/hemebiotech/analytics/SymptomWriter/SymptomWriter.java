@@ -43,7 +43,7 @@ public class SymptomWriter implements ISymptomWriter {
 				for (Entry<String, Integer> m : countEverySymptoms.entrySet()) { 
 					pw.println(m.getKey() + "=" + m.getValue());  
 				}
-
+				pw.close();
 			} 
 			catch (IOException e) {
 				e.printStackTrace();

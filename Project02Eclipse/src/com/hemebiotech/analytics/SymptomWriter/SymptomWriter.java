@@ -38,7 +38,7 @@ public class SymptomWriter implements ISymptomWriter {
 			// we create a new FileOuputStream with @param filepathW and we associate a PrinterWriter which print on fos
 			try {
 				OutputStream fos = new FileOutputStream(printOnFile);
-				PrintWriter pw = new PrintWriter(fos); //autocloseable
+				PrintWriter pw = new PrintWriter(fos); 
 				// create a Map m that will print @param map values and keys in the file
 				for (Entry<String, Integer> m : countEverySymptoms.entrySet()) { 
 					pw.println(m.getKey() + "=" + m.getValue());  

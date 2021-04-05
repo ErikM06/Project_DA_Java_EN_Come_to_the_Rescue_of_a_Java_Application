@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Anything that will count the symptoms from a List
  * 
- * A method that loop on each item of the List returned from ISymptomReader,
+ * A method that loop on each item of the List returned from IReadSymptomDataFromFile ,
  * count every item then return an ordered TreeMap with a key as the symptom and value the number of occurrence
  *
  *
@@ -15,7 +15,7 @@ import java.util.Map;
 public interface ISymptomCount {
 	
 	/**
-	 * @param symptoms the result ISymptomReader class return
+	 * @param symptoms the result IReadSymptomDataFromFile class return
 	 *
 	 */
 	

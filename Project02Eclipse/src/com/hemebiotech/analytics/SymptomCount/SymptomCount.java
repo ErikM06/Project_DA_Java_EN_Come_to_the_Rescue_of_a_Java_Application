@@ -8,7 +8,7 @@ import java.util.TreeMap;
 public class SymptomCount implements ISymptomCount {
 	
 	/**
-	 * @param symptoms the List returned from ISymptomReader
+	 * @param symptoms the List returned from IReadSymptomDataFromFile 
 	 */
 	public Map<String,Integer> getSymptomsCount (List <String> symptoms){
 		

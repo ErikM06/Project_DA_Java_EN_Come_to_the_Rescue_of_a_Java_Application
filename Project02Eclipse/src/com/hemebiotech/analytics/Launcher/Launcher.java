@@ -51,7 +51,7 @@ public class Launcher {
 
 				System.out.println("default args[1] starting");
 
-				File outputDefaultFilePath = new File("Project02Eclipse\\result.txt");
+				File outputDefaultFilePath = new File("Project02Eclipse\\result.out.txt");
 				// convert the output filepath into String
 				String output = outputDefaultFilePath.toString();
 				System.out.println("The output path is " + outputDefaultFilePath.getAbsolutePath());

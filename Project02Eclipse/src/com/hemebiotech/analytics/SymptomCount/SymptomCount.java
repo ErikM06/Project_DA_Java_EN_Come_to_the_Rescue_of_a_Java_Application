@@ -8,13 +8,13 @@ import java.util.TreeMap;
 public class SymptomCount implements ISymptomCount {
 	
 	/**
-	 * @param symptoms the List returned from IReadSymptomDataFromFile 
+	 * @param symptomsFromFile the List returned from IReadSymptomDataFromFile 
 	 */
-	public Map<String,Integer> getSymptomsCount (List <String> symptoms){
+	public Map<String,Integer> getSymptomsCount (List <String> symptomsFromFile){
 		
 		Map<String,Integer> countEverySymptoms = new TreeMap<String,Integer>();
 		
-		for (String s : symptoms) {
+		for (String s : symptomsFromFile) {
 			if(countEverySymptoms.containsKey(s)) {
 				Integer count = countEverySymptoms.get(s);
 				countEverySymptoms.put(s, count+1);
